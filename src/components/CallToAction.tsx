@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 
 const CallToAction = () => {
@@ -55,22 +54,19 @@ const CallToAction = () => {
               <p className="text-sm">per iPhone e iPad</p>
             </div>
             
-            <form className="max-w-md mx-auto mb-8">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input 
-                  type="email" 
-                  placeholder="Inserisci la tua email" 
-                  className="flex-1 rounded-full border border-gray-200 px-5 py-3 focus:outline-none focus:ring-2 focus:ring-leap-primary/50"
-                  required
-                />
-                <button className="btn-primary whitespace-nowrap">
-                  Accedi alla Beta
-                </button>
-              </div>
-            </form>
+            <div className="max-w-md mx-auto mb-8">
+              <a 
+                href="https://testflight.apple.com/join/Zc5m66yT" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary inline-block"
+              >
+                Accedi alla Beta
+              </a>
+            </div>
             
             <p className="text-sm text-gray-500">
-              Iscrivendoti, sarai il primo a sapere quando Leap sarà disponibile nella tua zona.
+              Scarica subito Leap e inizia la tua nuova esperienza di apprendimento.
             </p>
           </div>
         </div>

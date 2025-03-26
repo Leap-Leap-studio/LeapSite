@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -24,6 +23,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center space-x-2">
+          <img src="/logo.png" alt="Leap Logo" className="h-8 w-auto" />
           <span className="text-2xl font-bold text-leap-dark">Leap</span>
         </a>
 

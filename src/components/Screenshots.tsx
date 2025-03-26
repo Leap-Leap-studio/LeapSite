@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import {
   Carousel,
@@ -96,7 +95,7 @@ const Screenshots = () => {
           <Carousel className="w-full">
             <CarouselContent>
               {screenshots.map((item) => (
-                <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3 px-3 py-8">
                   <div className="glass-card p-2 h-full">
                     <div className="relative aspect-[9/16] md:aspect-[9/19] bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden">
                       {/* Placeholder for actual screenshots - would be replaced with real images */}

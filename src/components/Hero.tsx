@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -71,14 +70,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-leap-primary/20 to-leap-accent/20 blur-2xl" />
             <div className="bg-white/30 backdrop-blur-md shadow-glass rounded-3xl p-4 md:p-6 border border-white/30 overflow-hidden relative hover-scale">
               <div className="aspect-[4/3] bg-black/5 rounded-2xl flex items-center justify-center overflow-hidden">
-                {/* We would replace this with actual app screenshots */}
-                <div className="text-center p-12">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-r from-leap-primary to-leap-secondary flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">L</span>
-                  </div>
-                  <h3 className="text-lg font-medium">Screenshot dell'App</h3>
-                  <p className="text-sm text-gray-500 mt-2">L'Esperienza di Apprendimento Gamificata</p>
-                </div>
+                <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-full h-full object-cover" />
               </div>
               
               {/* Floating elements to show gamification */}

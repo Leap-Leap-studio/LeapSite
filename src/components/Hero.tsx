@@ -69,9 +69,9 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-leap-primary/20 to-leap-accent/20 blur-2xl" />
             <div className="bg-white/30 backdrop-blur-md shadow-glass rounded-3xl p-4 md:p-6 border border-white/30 overflow-hidden relative hover-scale">
-              <div className="aspect-[4/3] bg-black/5 rounded-2xl flex items-center justify-center overflow-hidden">
-                <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-full h-full object-cover" />
-              </div>
+              <div className="bg-black/5 rounded-2xl overflow-hidden">
+                 <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-full h-auto object-cover" />
+             </div>
               
               {/* Floating elements to show gamification */}
               <div className="absolute -top-2 -right-2 bg-white rounded-full p-2 shadow-soft animate-float">

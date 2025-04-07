@@ -98,7 +98,7 @@ const Screenshots = () => {
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3 px-3 py-8">
                   <div className="glass-card p-2 h-full">
                     <div className="relative aspect-[9/16] md:aspect-[9/19] bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden">
-                      <img src={`/screenshot/screenshot-${item.id}.jpg`} alt={item.title} className="w-full h-full object-cover" />
+                      <img src={`/screenshot/screenshot-${item.id}.png`} alt={item.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="p-3">
                       <h3 className="font-semibold">{item.title}</h3>

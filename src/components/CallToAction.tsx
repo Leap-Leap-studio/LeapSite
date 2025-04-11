@@ -56,7 +56,7 @@ const CallToAction = () => {
             
             <div className="max-w-md mx-auto mb-8">
               <a 
-                href="https://testflight.apple.com/join/Zc5m66yT" 
+                href="https://forms.gle/9uHTq2Ys54SYZNXS8" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn-primary inline-block"

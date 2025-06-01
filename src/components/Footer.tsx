@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="bg-white py-12 border-t border-gray-100">
@@ -44,10 +43,13 @@ const Footer = () => {
             <h3 className="font-semibold text-gray-900 mb-4">Legale</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-leap-primary transition-colors">Privacy Policy</a>
+                <a href="/privacy-policy" className="text-gray-600 hover:text-leap-primary transition-colors">Privacy Policy</a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-leap-primary transition-colors">Termini di Servizio</a>
+                <a href="/terms-of-service" className="text-gray-600 hover:text-leap-primary transition-colors">Termini di Servizio</a>
+              </li>
+              <li>
+                <a href="/eula" className="text-gray-600 hover:text-leap-primary transition-colors">EULA</a>
               </li>
               <li>
                 <a href="#" className="text-gray-600 hover:text-leap-primary transition-colors">Cookie Policy</a>

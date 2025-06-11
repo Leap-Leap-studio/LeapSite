@@ -52,14 +52,14 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#contact" className="btn-primary">
+                Scarica Leap
+              </a>
               <a href="#features" className="btn-primary">
                 Scopri le Funzionalità
               </a>
               <a href="#how-it-works" className="btn-secondary">
                 Come Funziona
-              </a>
-              <a href="#contact" className="btn-primary">
-                Scarica Leap
               </a>
             </div>
             

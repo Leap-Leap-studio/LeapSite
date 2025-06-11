@@ -84,10 +84,10 @@ const Screenshots = () => {
           </h2>
           <p className="text-lg text-gray-600 mb-6">
             Visualizza alcuni screenshot dell'app Leap in azione su iPhone e iPad.
-            Attualmente disponibile in beta su TestFlight.
+            Ora disponibile sull'App Store.
           </p>
           <div className="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
-            <span className="text-leap-primary font-medium">Disponibile in beta su TestFlight per iOS</span>
+            <span className="text-leap-primary font-medium">Disponibile su App Store per iOS</span>
           </div>
         </div>
         
@@ -117,7 +117,7 @@ const Screenshots = () => {
         
         <div className="text-center mt-12">
           <a href="#contact" className="btn-secondary">
-            Partecipa alla Beta
+            Scarica Leap
           </a>
         </div>
       </div>

@@ -46,27 +46,26 @@ const CallToAction = () => {
             
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Unisciti a migliaia di studenti che hanno già scoperto un modo più coinvolgente, personalizzato 
-              ed efficace per imparare. Ottieni accesso anticipato a Leap oggi!
+              ed efficace per imparare. Scarica Leap oggi!
             </p>
-            
-            <div className="bg-leap-primary/10 p-4 rounded-lg mb-8 inline-block">
-              <p className="text-leap-primary font-medium mb-1">Disponibile in beta su TestFlight</p>
-              <p className="text-sm">per iPhone e iPad</p>
-            </div>
             
             <div className="max-w-md mx-auto mb-8">
               <a 
-                href="https://testflight.apple.com/join/8N3vmPHv" 
+                href="https://apps.apple.com/it/app/leap/id6742512702" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn-primary inline-block"
+                className="inline-block"
               >
-                Accedi alla Beta
+                <img 
+                  src="/downloadAppStore.png" 
+                  alt="Scarica su App Store" 
+                  className="h-12 md:h-14 w-auto hover:opacity-80 transition-opacity"
+                />
               </a>
             </div>
             
             <p className="text-sm text-gray-500">
-              Scarica subito Leap e inizia la tua nuova esperienza di apprendimento.
+              Disponibile su iPhone e iPad
             </p>
           </div>
         </div>

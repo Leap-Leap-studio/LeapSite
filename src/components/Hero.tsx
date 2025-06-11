@@ -58,10 +58,13 @@ const Hero = () => {
               <a href="#how-it-works" className="btn-secondary">
                 Come Funziona
               </a>
+              <a href="#contact" className="btn-primary">
+                Scarica Leap
+              </a>
             </div>
             
             <div className="mt-6 bg-white/80 backdrop-blur-sm p-3 rounded-lg inline-block text-sm">
-              <span className="font-medium text-leap-primary">Ora disponibile in beta su TestFlight</span>
+              <span className="font-medium text-leap-primary">Disponibile su App Store</span>
               <p className="text-gray-600">per iPhone e iPad</p>
             </div>
           </div>

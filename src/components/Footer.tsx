@@ -60,7 +60,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-100 mt-12 pt-8 text-center">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Leap S.R.L.S.. Tutti i diritti riservati.
+            &copy; {new Date().getFullYear()} Leap S.R.L.S. Tutti i diritti riservati.
           </p>
         </div>
       </div>

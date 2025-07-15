@@ -82,6 +82,9 @@ const Screenshots = () => {
             Scopri
             <span className="text-gradient"> l'Esperienza Leap</span>
           </h2>
+          <p className="text-yellow-800 bg-yellow-100 border border-yellow-300 rounded-lg px-4 py-2 mb-4 text-sm">
+            Novità: Stiamo lavorando alla versione web di Leap per chi non ha iOS! Rimani aggiornato, presto sarà disponibile anche per browser.
+          </p>
           <p className="text-lg text-gray-600 mb-6">
             Visualizza alcuni screenshot dell'app Leap in azione su iPhone e iPad.
             Ora disponibile sull'App Store.
@@ -97,8 +100,8 @@ const Screenshots = () => {
               {screenshots.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3 px-3 py-8">
                   <div className="glass-card p-2 h-full">
-                    <div className="relative aspect-[9/16] md:aspect-[9/19] bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden">
-                      <img src={`/screenshot/screenshot-${item.id}.png`} alt={item.title} className="w-full h-full object-cover" />
+                    <div className="relative aspect-[9/16] md:aspect-[9/19] bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden flex justify-center items-center">
+                      <img src={`/screenshot/screenshot-${item.id}.png`} alt={item.title} className="w-32 md:w-40 lg:w-48 h-auto object-cover" />
                     </div>
                     <div className="p-3">
                       <h3 className="font-semibold">{item.title}</h3>

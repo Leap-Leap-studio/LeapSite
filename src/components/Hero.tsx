@@ -67,13 +67,27 @@ const Hero = () => {
               <span className="font-medium text-leap-primary">Disponibile su App Store</span>
               <p className="text-gray-600">per iPhone e iPad</p>
             </div>
+            {/* AVVISO WEB APP IN SVILUPPO */}
+            <div className="mt-4 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg px-4 py-3 text-sm max-w-xl mx-auto lg:mx-0">
+              <strong>Novità:</strong> Stiamo lavorando alla versione web di Leap per chi non ha iOS! Rimani aggiornato, presto sarà disponibile anche per browser.
+              <div className="mt-3 flex justify-center lg:justify-start">
+                <a
+                  href="https://app.leapstudio.it"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary text-sm px-5 py-2 rounded-full shadow hover:opacity-90 transition"
+                >
+                  Apri Web App
+                </a>
+              </div>
+            </div>
           </div>
           
           <div className="relative">
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-leap-primary/20 to-leap-accent/20 blur-2xl" />
             <div className="bg-white/30 backdrop-blur-md shadow-glass rounded-3xl p-4 md:p-6 border border-white/30 overflow-hidden relative hover-scale">
-              <div className="bg-black/5 rounded-2xl overflow-hidden">
-                 <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-full h-auto object-cover" />
+              <div className="bg-black/5 rounded-2xl overflow-hidden flex justify-center items-center">
+                 <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-56 md:w-72 lg:w-80 h-auto object-cover" />
              </div>
               
               {/* Floating elements to show gamification */}

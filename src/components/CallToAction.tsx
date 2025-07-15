@@ -43,6 +43,16 @@ const CallToAction = () => {
               Pronto a Trasformare
               <span className="text-gradient block">La Tua Esperienza di Apprendimento?</span>
             </h2>
+            <div className="mb-8 flex justify-center">
+              <a
+                href="https://app.leapstudio.it"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-sm px-5 py-2 rounded-full shadow hover:opacity-90 transition"
+              >
+                Apri Web App
+              </a>
+            </div>
             
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Unisciti a migliaia di studenti che hanno già scoperto un modo più coinvolgente, personalizzato 

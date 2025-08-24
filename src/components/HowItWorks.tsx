@@ -104,7 +104,8 @@ const HowItWorks = () => {
           </h2>
           <p className="text-lg text-gray-600">
             Segui questi semplici passaggi per intraprendere un'esperienza di apprendimento rivoluzionaria che combina coinvolgimento, 
-            personalizzazione e successo.
+            personalizzazione e successo. Leap utilizza intelligenza artificiale avanzata per adattare l'esperienza educativa 
+            alle esigenze individuali di ogni studente, creando un percorso di apprendimento ottimale e coinvolgente.
           </p>
         </div>
         

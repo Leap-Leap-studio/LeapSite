@@ -47,8 +47,9 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg text-gray-600 mb-8 md:pr-12 max-w-2xl mx-auto lg:mx-0">
-              Leap è un LMS innovativo che rende l'apprendimento più coinvolgente e collaborativo grazie alla gamification,
-              all'intelligenza artificiale e alle interazioni sociali.
+              Leap è un LMS (Learning Management System) innovativo che trasforma l'educazione tradizionale attraverso gamification, 
+              intelligenza artificiale e collaborazione sociale. Progettato per studenti di scuole medie e superiori, 
+              l'app rende l'apprendimento più coinvolgente e collaborativo.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

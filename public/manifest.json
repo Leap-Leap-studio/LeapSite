@@ -1,7 +1,7 @@
 {
   "name": "Leap - L'Esperienza di Apprendimento Gamificata",
   "short_name": "Leap",
-  "description": "Un LMS innovativo che rende l'apprendimento più coinvolgente e collaborativo attraverso gamification, IA e interazioni sociali.",
+  "description": "Leap è un LMS (Learning Management System) innovativo che trasforma l'educazione tradizionale attraverso gamification, intelligenza artificiale e collaborazione sociale. Progettato per studenti di scuole medie e superiori.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

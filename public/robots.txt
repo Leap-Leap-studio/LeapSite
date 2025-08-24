@@ -1,20 +1,33 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
 User-agent: *
 Allow: /
 
-User-agent: Google-adstxt
-Disallow:
+# Permetti accesso specifico ai crawler AI
+User-agent: GPTBot
+Allow: /
 
-# Sitemap
-Sitemap: https://leap-app.it/sitemap.xml 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# Blocca accesso a file non necessari
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /_headers
+Disallow: /_redirects
+
+# Sitemap per migliorare l'indicizzazione
+Sitemap: https://leap-app.it/sitemap.xml
+
+# Crawl-delay per rispettare le risorse del server
+Crawl-delay: 1 

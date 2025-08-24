@@ -6,6 +6,8 @@ import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Screenshots from "@/components/Screenshots";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import StructuredContent from "@/components/StructuredContent";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 
@@ -42,6 +44,8 @@ const Index = () => {
       <HowItWorks />
       <Screenshots />
       <Testimonials />
+      <FAQ />
+      <StructuredContent />
       <CallToAction />
       <Footer />
     </div>

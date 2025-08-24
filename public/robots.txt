@@ -27,7 +27,7 @@ Disallow: /_headers
 Disallow: /_redirects
 
 # Sitemap per migliorare l'indicizzazione
-Sitemap: https://leap-app.it/sitemap.xml
+Sitemap: https://leapstudio.it/sitemap.xml
 
 # Crawl-delay per rispettare le risorse del server
 Crawl-delay: 1 

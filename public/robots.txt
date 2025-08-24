@@ -14,4 +14,7 @@ User-agent: *
 Allow: /
 
 User-agent: Google-adstxt
-Disallow: 
+Disallow:
+
+# Sitemap
+Sitemap: https://leap-app.it/sitemap.xml 

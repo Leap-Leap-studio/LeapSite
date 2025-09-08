@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import PrivacyPolicyRedirect from "./pages/privacy-policy";
 import TermsOfServiceRedirect from "./pages/terms-of-service";
 import EulaRedirect from "./pages/eula";
+import FaqPage from "./pages/faq";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/faq" element={<FaqPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyRedirect />} />
           <Route path="/terms-of-service" element={<TermsOfServiceRedirect />} />
           <Route path="/eula" element={<EulaRedirect />} />

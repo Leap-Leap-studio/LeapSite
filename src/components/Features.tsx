@@ -93,10 +93,7 @@ const Features = () => {
             <span className="text-gradient"> Funzionalità Coinvolgenti</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Progettato specificamente per studenti di scuole medie e superiori, Leap offre strumenti personalizzati 
-            per migliorare la motivazione e la ritenzione della conoscenza attraverso esperienze interattive 
-            e gamificate. La piattaforma combina intelligenza artificiale, collaborazione sociale e 
-            contenuti educativi dinamici per creare un'esperienza di apprendimento unica.
+            
           </p>
         </div>
         
@@ -120,9 +117,9 @@ const Features = () => {
             delay={300}
           />
           <FeatureCard
-            icon="🏆"
-            title="Sistema di Traguardi"
-            description="Guadagna badge, sblocca ricompense e monitora i progressi con un sistema completo di traguardi che celebra ogni vittoria."
+            icon="🔍"
+            title="Contenuti Interattivi"
+            description="Coinvolgimento con materiali didattici dinamici e multimediali che danno vita alle materie e si adattano a diversi stili di apprendimento."
             delay={400}
           />
           <FeatureCard
@@ -132,9 +129,9 @@ const Features = () => {
             delay={500}
           />
           <FeatureCard
-            icon="🔍"
-            title="Contenuti Interattivi"
-            description="Coinvolgimento con materiali didattici dinamici e multimediali che danno vita alle materie e si adattano a diversi stili di apprendimento."
+            icon="🏆"
+            title="Sistema di Traguardi"
+            description="Guadagna badge, sblocca ricompense e monitora i progressi con un sistema completo di traguardi che celebra ogni vittoria."
             delay={600}
           />
         </div>

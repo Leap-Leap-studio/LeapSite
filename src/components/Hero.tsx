@@ -47,38 +47,49 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg text-gray-600 mb-8 md:pr-12 max-w-2xl mx-auto lg:mx-0">
-              Leap è un LMS (Learning Management System) innovativo che trasforma l'educazione tradizionale attraverso gamification, 
-              intelligenza artificiale e collaborazione sociale. Progettato per studenti di scuole medie e superiori, 
-              l'app rende l'apprendimento più coinvolgente e collaborativo.
+              Stiamo creando il primo assistente allo studio che trasforma l'apprendimento in un passatempo leggero ed efficace.
+            </p>
+            
+            <p className="text-lg text-gray-600 mb-4 md:pr-12 max-w-2xl mx-auto lg:mx-0">
+              Progettato per scuole medie e superiori, l'app fornisce strumenti e metodi di studio creati partendo da due elementi chiave:
+            </p>
+            
+            <ul className="text-lg text-gray-600 mb-6 md:pr-12 max-w-2xl mx-auto lg:mx-0 text-left">
+              <li className="mb-2">• idee e necessità degli studenti.</li>
+              <li className="mb-2">• studi neuroscientifici e pedagogici.</li>
+            </ul>
+            
+            <p className="text-lg text-gray-600 mb-6 md:pr-12 max-w-2xl mx-auto lg:mx-0">
+              Abbiamo condotto una ricerca nazionale e intervistato più di 1000 ragazzi per creare la soluzione definitiva, dinamica e più intelligente sul mercato.
+            </p>
+            
+            <p className="text-lg text-gray-600 mb-8 md:pr-12 max-w-2xl mx-auto lg:mx-0 font-semibold">
+              Usa Leap e impara al doppio della velocità!
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="#contact" className="btn-primary">
                 Scarica Leap
               </a>
-              <a href="#features" className="btn-primary">
-                Scopri le Funzionalità
-              </a>
-              <a href="#how-it-works" className="btn-secondary">
-                Come Funziona
+              <a 
+                href="https://app.leapstudio.it" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-primary"
+              >
+                Non hai iOS? Usa l'app online!
               </a>
             </div>
             
-            <div className="mt-6 bg-white/80 backdrop-blur-sm p-3 rounded-lg inline-block text-sm">
-              <span className="font-medium text-leap-primary">Disponibile su App Store</span>
-              <p className="text-gray-600">per iPhone e iPad</p>
-            </div>
-            {/* AVVISO WEB APP IN SVILUPPO */}
-            <div className="mt-4 bg-yellow-100 border border-yellow-300 text-yellow-800 rounded-lg px-4 py-3 text-sm max-w-xl mx-auto lg:mx-0">
-              <strong>Novità:</strong> Stiamo lavorando alla versione web di Leap per chi non ha iOS! Rimani aggiornato, presto sarà disponibile anche per browser.
-              <div className="mt-3 flex justify-center lg:justify-start">
-                <a
-                  href="https://app.leapstudio.it"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-sm px-5 py-2 rounded-full shadow hover:opacity-90 transition"
-                >
-                  Apri Web App
+            
+            <div className="mt-6">
+              <p className="text-lg text-gray-600 mb-4">Vuoi saperne di più?</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="#features" className="btn-secondary">
+                  Scopri Funzionalità
+                </a>
+                <a href="#contact" className="btn-secondary">
+                  Contattaci!
                 </a>
               </div>
             </div>

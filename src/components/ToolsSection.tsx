@@ -56,8 +56,12 @@ const ToolCard = ({
       className="tools-card reveal hover:scale-105 transition-all duration-300 cursor-pointer"
       onClick={onOpen}
     >
-      <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-3xl">
-        {icon}
+      <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+        <img 
+          src={`/strumenti/${icon}`} 
+          alt={title}
+          className="w-full h-full object-contain"
+        />
       </div>
       <h3 className="text-center font-semibold text-gray-800">{title}</h3>
     </div>
@@ -152,91 +156,91 @@ const ToolsSection = () => {
 
   const tools = [
     {
-      icon: "👵",
+      icon: "nonna.png",
       title: "Spiega alla Nonna",
       description: "Ripeti l'argomento come se lo spiegassi alla nonna: ti alleni a semplificare e a fissare i concetti.",
       color: "orange"
     },
     {
-      icon: "🦆",
+      icon: "papera.png",
       title: "Sfida la Papera",
       description: "Spiega l'argomento e rispondi alle domande della papera: scopri quanto sei chiaro e lineare.",
       color: "orange"
     },
     {
-      icon: "🤖",
+      icon: "Assistente.svg",
       title: "Assistente",
       description: "Un AI come ChatGPT, ma specializzato sugli argomenti scolastici.",
       color: "purple"
     },
     {
-      icon: "🎤",
+      icon: "trascrov.svg",
       title: "Trascrivi",
       description: "Trasforma lezioni o audio in materiale scritto pronto da studiare.",
       color: "green"
     },
     {
-      icon: "🧮",
+      icon: "risolutore.svg",
       title: "Risolutore Esercizi",
       description: "Ti aiuta a risolvere esercizi di matematica, chimica e molto altro.",
       color: "red"
     },
     {
-      icon: "📈",
+      icon: "migliora.png",
       title: "Migliora",
       description: "Trasforma le tue bozze in testi più chiari e curati.",
       color: "none"
     },
     {
-      icon: "📋",
+      icon: "schematizza.png",
       title: "Schematizza",
       description: "Crea schemi semplici ed efficaci dal tuo materiale.",
       color: "none"
     },
     {
-      icon: "✨",
+      icon: "semplifica.png",
       title: "Semplifica",
       description: "Rende un testo complesso più facile da capire.",
       color: "none"
     },
     {
-      icon: "✅",
+      icon: "VeroFalso.svg",
       title: "Vero o Falso",
       description: "Genera domande vero/falso dal tuo materiale.",
       color: "green"
     },
     {
-      icon: "❓",
+      icon: "Quiz.svg",
       title: "Quiz",
       description: "Crea quiz personalizzati per allenarti.",
       color: "yellow"
     },
     {
-      icon: "🃏",
+      icon: "memorycard.svg",
       title: "Flashcards",
       description: "Genera flashcard per memorizzare meglio.",
       color: "blue"
     },
     {
-      icon: "🌐",
+      icon: "traduttore.png",
       title: "Traduttore",
       description: "Traduce i tuoi materiali di studio.",
       color: "none"
     },
     {
-      icon: "📄",
+      icon: "riassunto.png",
       title: "Riassunto",
       description: "Sintetizza i testi lunghi nei punti chiave.",
       color: "none"
     },
     {
-      icon: "🗺️",
-      title: "Mappe Concettuali",
+      icon: "mappe.svg",
+      title: "Mappe",
       description: "Crea mappe visive per collegare le idee.",
       color: "orange"
     },
     {
-      icon: "🎭",
+      icon: "simulaotre.svg",
       title: "Simulatore Interrogazione",
       description: "Simula un'interrogazione con insegnanti virtuali per allenare orale e scritto.",
       color: "red"
@@ -318,10 +322,14 @@ const ToolsSection = () => {
                     }}
                     onClick={() => handleToolClick(tool)}
                   >
-                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-3xl">
-                      {tool.icon}
+                    <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                      <img 
+                        src={`/strumenti/${tool.icon}`} 
+                        alt={tool.title}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
-                    <h3 style={{ color: getToolColor(tool.color) }}>
+                    <h3 style={{ color: getToolColor(tool.color) }} className="text-center text-sm leading-tight">
                       {tool.title}
                     </h3>
                   </div>
@@ -349,7 +357,13 @@ const ToolsSection = () => {
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-3 text-xl">
-              <span className="text-3xl">{selectedTool?.icon}</span>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <img 
+                  src={`/strumenti/${selectedTool?.icon}`} 
+                  alt={selectedTool?.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               {selectedTool?.title}
             </DialogTitle>
             <DialogDescription className="text-base pt-4">

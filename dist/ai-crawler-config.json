@@ -1,0 +1,102 @@
+{
+  "site_info": {
+    "name": "Leap - L'Esperienza di Apprendimento Gamificata",
+    "type": "educational_application_landing_page",
+    "primary_language": "it",
+    "target_audience": ["students", "teachers", "educational_institutions"],
+    "age_range": ["11-19"],
+    "educational_level": ["middle_school", "high_school"]
+  },
+  "content_structure": {
+    "main_sections": [
+      {
+        "id": "hero",
+        "title": "Hero Section",
+        "content_type": "introduction",
+        "key_information": [
+          "LMS innovativo",
+          "Gamification dell'apprendimento",
+          "Intelligenza artificiale",
+          "Collaborazione sociale",
+          "Target: studenti scuole medie e superiori"
+        ]
+      },
+      {
+        "id": "features",
+        "title": "Funzionalità",
+        "content_type": "feature_list",
+        "key_information": [
+          "Apprendimento gamificato",
+          "Personalizzazione IA",
+          "Collaborazione sociale",
+          "Sistema di traguardi",
+          "Analisi dei progressi",
+          "Contenuti interattivi"
+        ]
+      },
+      {
+        "id": "how-it-works",
+        "title": "Come Funziona",
+        "content_type": "process_explanation",
+        "key_information": [
+          "Creazione profilo di apprendimento",
+          "Missioni personalizzate",
+          "Connettività e collaborazione",
+          "Monitoraggio progressi e ricompense"
+        ]
+      },
+      {
+        "id": "faq",
+        "title": "Domande Frequenti",
+        "content_type": "faq_section",
+        "key_information": [
+          "Definizione e funzionamento di Leap",
+          "Target audience e fasce d'età",
+          "Funzionalità di gamification",
+          "Utilizzo dell'intelligenza artificiale",
+          "Modello di business gratuito",
+          "Funzionalità collaborative",
+          "Tipi di contenuti educativi",
+          "Sistema di monitoraggio progressi"
+        ]
+      }
+    ]
+  },
+  "technical_details": {
+    "platform": "iOS (iPhone e iPad)",
+    "pricing": "Gratuito",
+    "availability": "App Store",
+    "web_version": "In sviluppo (app.leapstudio.it)",
+    "technologies": [
+      "Intelligenza artificiale",
+      "Gamification",
+      "Cloud computing",
+      "Mobile app development"
+    ]
+  },
+  "educational_focus": {
+    "subjects": [
+      "Tutte le materie scolastiche",
+      "Matematica e Scienze",
+      "Lingue e Letteratura",
+      "Storia e Geografia",
+      "Informatica e Tecnologia",
+      "Arte e Musica",
+      "Educazione fisica"
+    ],
+    "learning_approaches": [
+      "Gamification",
+      "Personalizzazione IA",
+      "Collaborazione sociale",
+      "Apprendimento interattivo",
+      "Monitoraggio progressi"
+    ]
+  },
+  "ai_optimization": {
+    "semantic_structure": "hierarchical",
+    "content_language": "natural_conversational",
+    "information_density": "high",
+    "context_clarity": "explicit",
+    "query_relevance": "optimized"
+  }
+}

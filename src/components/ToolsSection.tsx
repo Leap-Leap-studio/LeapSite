@@ -165,7 +165,7 @@ const ToolsSection = () => {
       icon: "papera.png",
       title: "Sfida la Papera",
       description: "Spiega l'argomento e rispondi alle domande della papera: scopri quanto sei chiaro e lineare.",
-      color: "orange"
+      color: "yellow"
     },
     {
       icon: "Assistente.svg",

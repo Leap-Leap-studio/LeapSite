@@ -71,8 +71,7 @@ const FAQ = () => {
             <span className="text-gradient"> Leap</span>
           </h2>
           <p className="text-lg text-gray-600">
-            Risposte alle domande più comuni su Leap, il nostro LMS innovativo che combina gamification, 
-            intelligenza artificiale e collaborazione sociale per trasformare l'esperienza di apprendimento.
+            Risposte alle domande più comuni su Leap
           </p>
         </div>
         

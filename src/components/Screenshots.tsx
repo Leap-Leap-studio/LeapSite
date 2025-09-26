@@ -82,15 +82,22 @@ const Screenshots = () => {
             Scopri
             <span className="text-gradient"> l'Esperienza Leap</span>
           </h2>
-          <p className="text-yellow-800 bg-yellow-100 border border-yellow-300 rounded-lg px-4 py-2 mb-4 text-sm">
-            Novità: Stiamo lavorando alla versione web di Leap per chi non ha iOS! Rimani aggiornato, presto sarà disponibile anche per browser.
-          </p>
           <p className="text-lg text-gray-600 mb-6">
             Visualizza alcuni screenshot dell'app Leap in azione su iPhone e iPad.
             Ora disponibile sull'App Store.
           </p>
-          <div className="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-8">
+          <div className="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
             <span className="text-leap-primary font-medium">Disponibile su App Store per iOS</span>
+          </div>
+          <div className="mb-8">
+            <a
+              href="https://app.leapstudio.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-sm px-5 py-2 rounded-full shadow hover:opacity-90 transition"
+            >
+              Apri Web App
+            </a>
           </div>
         </div>
         

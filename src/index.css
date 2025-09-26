@@ -144,6 +144,77 @@
   .highlight-chip {
     @apply inline-flex items-center rounded-full bg-leap-light px-3 py-1 text-xs font-medium text-leap-dark;
   }
+  
+  .tools-card {
+    @apply glass-card p-6 hover:scale-105 transition-all duration-300;
+  }
+  
+  .tools-card-enhanced {
+    @apply backdrop-blur-lg bg-white/90 border-2 shadow-glass rounded-2xl p-6 hover:scale-105 transition-all duration-300;
+    height: 168px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .tools-card-enhanced h3 {
+    @apply text-center font-semibold text-base;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+  
+  .tools-card-animated {
+    @apply animate-slide-in-right;
+  }
+  
+  .tools-card-container {
+    @apply overflow-hidden;
+  }
+  
+  .animate-pause {
+    animation-play-state: paused;
+  }
+  
+  .horizontal-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #22C55E #f1f1f1;
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #22C55E;
+    border-radius: 4px;
+  }
+  
+  .horizontal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #10B981;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .touch-pan-x {
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* Smooth scrolling */

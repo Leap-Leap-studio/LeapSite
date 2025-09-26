@@ -102,40 +102,42 @@ const HowItWorks = () => {
             Come Leap
             <span className="text-gradient"> Trasforma l'Apprendimento</span>
           </h2>
-          <p className="text-lg text-gray-600">
-            Segui questi semplici passaggi per intraprendere un'esperienza di apprendimento rivoluzionaria che combina coinvolgimento, 
-            personalizzazione e successo. Leap utilizza intelligenza artificiale avanzata per adattare l'esperienza educativa 
-            alle esigenze individuali di ogni studente, creando un percorso di apprendimento ottimale e coinvolgente.
-          </p>
+          <h3 className="text-xl font-semibold text-gray-700 mb-8">
+            Come usare Leap in due passi:
+          </h3>
         </div>
         
         <div className="space-y-12 md:space-y-24 max-w-5xl mx-auto">
           <Step 
             number={1} 
-            title="Crea il Tuo Profilo di Apprendimento" 
-            description="Iscriviti e completa una breve valutazione che aiuta la nostra IA a comprendere il tuo stile di apprendimento, i punti di forza e le aree di miglioramento."
+            title="Carica il materiale da studiare" 
+            description="nel formato che vuoi (appunti, pagine dei libri etc.)"
             delay={100}
           />
           
           <Step 
             number={2} 
-            title="Inizia le Missioni Personalizzate" 
-            description="Ricevi percorsi di apprendimento personalizzati con missioni interattive e sfide progettate specificamente per le tue esigenze e interessi."
+            title="Usa gli strumenti per studiare" 
+            description="Ripetere ed esercitarti su quel materiale!"
             isLeft={false}
             delay={200}
           />
           
+          <div className="text-center my-12">
+            <h3 className="text-2xl font-bold text-gray-800">Inoltre potrai:</h3>
+          </div>
+          
           <Step 
             number={3} 
-            title="Connettiti e Collabora" 
-            description="Unisciti a gruppi di studio, partecipa a sfide con i compagni di classe e ingaggia competizioni amichevoli che rendono l'apprendimento sociale e divertente."
+            title="Creare un gruppo classe" 
+            description="Condividere appunti e sfidare le altre scuole del mondo"
             delay={300}
           />
           
           <Step 
             number={4} 
-            title="Monitora i Progressi e Guadagna Ricompense" 
-            description="Osserva le tue competenze crescere con analisi intuitive mentre guadagni badge, sblocchi traguardi e raccogli ricompense per i tuoi successi."
+            title="Allenarti per l'interrogazione" 
+            description="La prova scritta o per migliorare la concentrazione"
             isLeft={false}
             delay={400}
           />

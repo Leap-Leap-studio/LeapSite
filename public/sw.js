@@ -1,10 +1,7 @@
-const CACHE_NAME = 'leap-cache-v1';
+const CACHE_NAME = 'leap-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/src/main.tsx',
-  '/src/App.tsx',
-  '/src/index.css',
   '/logo.png',
   '/favicon.ico',
   '/manifest.json',
@@ -20,6 +17,13 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Non intercettare richieste per file JavaScript e CSS dinamici
+  if (event.request.url.includes('/assets/') || 
+      event.request.url.endsWith('.js') || 
+      event.request.url.endsWith('.css')) {
+    return;
+  }
+  
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
@@ -38,10 +42,14 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
+            console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
         })
       );
+    }).then(() => {
+      // Prendi il controllo di tutte le pagine
+      return self.clients.claim();
     })
   );
 });

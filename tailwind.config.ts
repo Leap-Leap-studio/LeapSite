@@ -69,6 +69,18 @@ export default {
 					accent: '#06B6D4',
 					light: '#ECFDF5',
 					dark: '#064E3B'
+				},
+				'figma-orange': {
+					300: '#F97316',
+					400: '#EA580C'
+				},
+				'tool-colors': {
+					'orange': '#F97316',
+					'purple': '#8B5CF6',
+					'green': '#10B981',
+					'red': '#EF4444',
+					'yellow': '#F59E0B',
+					'blue': '#3B82F6'
 				}
 			},
 			fontFamily: {
@@ -116,6 +128,14 @@ export default {
 				'pulse-soft': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.8' }
+				},
+				'slide-in-right': {
+					'0%': { opacity: '0', transform: 'translateX(100px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
+				},
+				'slide-continuous': {
+					'0%': { transform: 'translateX(100%)' },
+					'100%': { transform: 'translateX(-100%)' }
 				}
 			},
 			animation: {
@@ -127,7 +147,9 @@ export default {
 				'fade-in-left': 'fade-in-left 0.7s ease-out forwards',
 				'scale-in': 'scale-in 0.7s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 4s ease-in-out infinite'
+				'pulse-soft': 'pulse-soft 4s ease-in-out infinite',
+				'slide-in-right': 'slide-in-right 0.8s ease-out forwards',
+				'slide-continuous': 'slide-continuous 20s linear infinite'
 			},
 			backdropBlur: {
 				xs: '2px',

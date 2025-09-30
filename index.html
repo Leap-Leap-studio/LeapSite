@@ -170,49 +170,31 @@
       }
     </script>
     
-    <!-- Service Worker -->
+    <!-- Service Worker - DISABILITATO TEMPORANEAMENTE -->
     <script>
       if ('serviceWorker' in navigator) {
-        // Prima disattiva tutti i service worker esistenti
+        // Disattiva immediatamente tutti i service worker esistenti
         navigator.serviceWorker.getRegistrations().then(function(registrations) {
           for(let registration of registrations) {
+            console.log('Disattivando service worker:', registration);
             registration.unregister();
           }
         });
 
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then((registration) => {
-              console.log('SW registered: ', registration);
-              
-              // Forza l'aggiornamento immediato
-              registration.update();
-              
-              // Controlla se c'è un aggiornamento disponibile
-              registration.addEventListener('updatefound', () => {
-                const newWorker = registration.installing;
-                if (newWorker) {
-                  newWorker.addEventListener('statechange', () => {
-                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                      // Nuovo service worker installato, ricarica la pagina
-                      window.location.reload();
-                    }
-                  });
-                }
-              });
-            })
-            .catch((registrationError) => {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
+        // Pulisci anche tutte le cache
+        if ('caches' in window) {
+          caches.keys().then(function(cacheNames) {
+            return Promise.all(
+              cacheNames.map(function(cacheName) {
+                console.log('Eliminando cache:', cacheName);
+                return caches.delete(cacheName);
+              })
+            );
+          });
+        }
 
-        // Ascolta i messaggi dal service worker
-        navigator.serviceWorker.addEventListener('message', function(event) {
-          if (event.data && event.data.type === 'SW_UPDATED') {
-            console.log('Service Worker aggiornato, ricarico la pagina');
-            window.location.reload();
-          }
-        });
+        // Non registrare nuovi service worker per ora
+        console.log('Service Worker disabilitato temporaneamente per risolvere errori di caricamento');
       }
     </script>
   </body>

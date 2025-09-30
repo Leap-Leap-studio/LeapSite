@@ -204,12 +204,20 @@
           sessionStorage.clear();
         }
 
+        // Ascolta i messaggi dal service worker
+        navigator.serviceWorker.addEventListener('message', function(event) {
+          if (event.data && event.data.type === 'SW_DISABLED') {
+            console.log('Service Worker disabilitato, ricarico la pagina');
+            window.location.reload();
+          }
+        });
+
         // Ricarica la pagina dopo aver disattivato il service worker
         setTimeout(function() {
           console.log('Ricarico la pagina per applicare le modifiche');
           // Forza il refresh della cache del browser
           window.location.reload(true);
-        }, 1000);
+        }, 2000);
       }
     </script>
   </body>

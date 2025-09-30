@@ -170,18 +170,21 @@
       }
     </script>
     
-    <!-- Service Worker - DISABILITATO TEMPORANEAMENTE -->
+    <!-- Service Worker - DISABILITATO COMPLETAMENTE -->
     <script>
+      // Forza la disattivazione immediata del service worker
       if ('serviceWorker' in navigator) {
-        // Disattiva immediatamente tutti i service worker esistenti
+        // Disattiva tutti i service worker esistenti
         navigator.serviceWorker.getRegistrations().then(function(registrations) {
           for(let registration of registrations) {
             console.log('Disattivando service worker:', registration);
-            registration.unregister();
+            registration.unregister().then(function(boolean) {
+              console.log('Service worker disattivato:', boolean);
+            });
           }
         });
 
-        // Pulisci anche tutte le cache
+        // Pulisci tutte le cache
         if ('caches' in window) {
           caches.keys().then(function(cacheNames) {
             return Promise.all(
@@ -193,8 +196,11 @@
           });
         }
 
-        // Non registrare nuovi service worker per ora
-        console.log('Service Worker disabilitato temporaneamente per risolvere errori di caricamento');
+        // Ricarica la pagina dopo aver disattivato il service worker
+        setTimeout(function() {
+          console.log('Ricarico la pagina per applicare le modifiche');
+          window.location.reload();
+        }, 1000);
       }
     </script>
   </body>

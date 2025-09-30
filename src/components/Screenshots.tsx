@@ -34,36 +34,36 @@ const Screenshots = () => {
     };
   }, []);
 
-  // Placeholder screenshots data - in a real app, these would be replaced with actual screenshots
+  // Screenshots data based on actual app content
   const screenshots = [
     {
       id: 1,
-      title: "Dashboard Personalizzata",
-      description: "Visualizza il tuo progresso e le prossime missioni con una dashboard intuitiva.",
+      title: "Focus e Concentrazione",
+      description: "Gestisci le tue sessioni di studio con il timer Pomodoro, blocca le distrazioni e mantieni la concentrazione.",
       deviceType: "iPhone"
     },
     {
       id: 2,
-      title: "Missioni Interattive",
-      description: "Completa sfide emozionanti che rendono l'apprendimento un gioco.",
-      deviceType: "iPad"
+      title: "Homepage e Materiali",
+      description: "Dashboard principale con caricamento materiali, gestione compiti e accesso rapido allo studio con AI.",
+      deviceType: "iPhone"
     },
     {
       id: 3,
-      title: "Profilo e Traguardi",
-      description: "Tieni traccia dei tuoi successi e sblocca nuove ricompense.",
+      title: "Gestione Materie",
+      description: "Organizza le tue materie di studio con icone e colori distintivi per ogni corso.",
       deviceType: "iPhone"
     },
     {
       id: 4,
-      title: "Studio Collaborativo",
-      description: "Connettiti con compagni e forma gruppi di studio interattivi.",
-      deviceType: "iPad"
+      title: "Strumenti e Ripetizione",
+      description: "Suite completa di strumenti: quiz, flashcard, simulazioni, sfide e funzionalità AI per l'apprendimento.",
+      deviceType: "iPhone"
     },
     {
       id: 5,
-      title: "Analisi dell'Apprendimento",
-      description: "Visualizza statistiche dettagliate sui tuoi progressi e aree di miglioramento.",
+      title: "Community e Social",
+      description: "Connettiti con altri studenti, partecipa a gruppi di studio e condividi le tue esperienze di apprendimento.",
       deviceType: "iPhone"
     }
   ];
@@ -107,8 +107,8 @@ const Screenshots = () => {
               {screenshots.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3 px-3 py-8">
                   <div className="glass-card p-2 h-full">
-                    <div className="relative bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden flex justify-center items-center">
-                      <img src={`/screenshot/screenshot-${item.id}.png`} alt={item.title} className="w-full h-auto object-contain max-h-96" />
+                    <div className="relative bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden h-96 flex justify-center">
+                      <img src={`/Screenshot/screenshot-${item.id === 1 ? 4 : item.id === 4 ? 1 : item.id === 2 ? 5 : item.id === 5 ? 2 : item.id}.png`} alt={item.title} className="h-full object-contain" />
                     </div>
                     <div className="p-3">
                       <h3 className="font-semibold">{item.title}</h3>

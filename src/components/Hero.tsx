@@ -95,25 +95,21 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-leap-primary/20 to-leap-accent/20 blur-2xl" />
-            <div className="bg-white/30 backdrop-blur-md shadow-glass rounded-3xl p-4 md:p-6 border border-white/30 overflow-hidden relative hover-scale">
-              <div className="bg-black/5 rounded-2xl overflow-hidden flex justify-center items-center">
-                 <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-full h-auto object-contain max-h-96" />
-             </div>
-              
-              {/* Floating elements to show gamification */}
-              <div className="absolute -top-2 -right-2 bg-white rounded-full p-2 shadow-soft animate-float">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">+10</span>
+          <div className="flex justify-center">
+            <div className="relative">
+              {/* iPhone frame */}
+              <div className="w-64 h-[580px] bg-black rounded-[3rem] p-2 shadow-2xl">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                  <img 
+                    src="/Screenshot/Homepage.png" 
+                    alt="Leap App Screenshot" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               
-              <div className="absolute bottom-10 -left-2 bg-white rounded-full p-2 shadow-soft animate-float" style={{ animationDelay: "1s" }}>
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">🏆</span>
-                </div>
-              </div>
+              {/* Home indicator */}
+              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-black/30 rounded-full"></div>
             </div>
           </div>
         </div>

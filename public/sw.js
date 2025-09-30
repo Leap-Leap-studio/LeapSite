@@ -1,4 +1,4 @@
-const CACHE_NAME = 'leap-cache-v3';
+const CACHE_NAME = 'leap-cache-v4';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -54,8 +54,15 @@ self.addEventListener('activate', (event) => {
         })
       );
     }).then(() => {
-      // Prendi il controllo di tutte le pagine
+      // Prendi il controllo di tutte le pagine immediatamente
       return self.clients.claim();
+    }).then(() => {
+      // Notifica tutti i client dell'aggiornamento
+      return self.clients.matchAll().then(clients => {
+        clients.forEach(client => {
+          client.postMessage({ type: 'SW_UPDATED' });
+        });
+      });
     })
   );
 });

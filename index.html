@@ -139,21 +139,54 @@
       window.addEventListener('error', function(e) {
         if (e.filename && e.filename.includes('.js')) {
           console.error('Errore caricamento JS:', e.filename);
+          
+          // Disattiva il service worker se causa problemi
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+              for(let registration of registrations) {
+                registration.unregister();
+              }
+            });
+          }
+          
           // Ricarica la pagina dopo un breve delay
           setTimeout(() => {
             window.location.reload();
           }, 1000);
         }
       });
+
+      // Controlla se il service worker sta causando problemi
+      if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+        // Se c'è un service worker attivo, controlla se sta causando errori
+        navigator.serviceWorker.addEventListener('error', function() {
+          console.log('Service Worker error, disattivando...');
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for(let registration of registrations) {
+              registration.unregister();
+            }
+          });
+        });
+      }
     </script>
     
     <!-- Service Worker -->
     <script>
       if ('serviceWorker' in navigator) {
+        // Prima disattiva tutti i service worker esistenti
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+        });
+
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js')
             .then((registration) => {
               console.log('SW registered: ', registration);
+              
+              // Forza l'aggiornamento immediato
+              registration.update();
               
               // Controlla se c'è un aggiornamento disponibile
               registration.addEventListener('updatefound', () => {
@@ -171,6 +204,14 @@
             .catch((registrationError) => {
               console.log('SW registration failed: ', registrationError);
             });
+        });
+
+        // Ascolta i messaggi dal service worker
+        navigator.serviceWorker.addEventListener('message', function(event) {
+          if (event.data && event.data.type === 'SW_UPDATED') {
+            console.log('Service Worker aggiornato, ricarico la pagina');
+            window.location.reload();
+          }
         });
       }
     </script>

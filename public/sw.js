@@ -17,11 +17,16 @@ self.addEventListener('activate', (event) => {
       // Prendi il controllo e disattiva
       return self.clients.claim();
     }).then(() => {
-      // Notifica i client di ricaricare
+      // Notifica i client che è stato disattivato
       return self.clients.matchAll().then(clients => {
         clients.forEach(client => {
           client.postMessage({ type: 'SW_DISABLED' });
         });
+      });
+    }).then(() => {
+      // Disattiva se stesso dopo aver notificato i client
+      return self.registration.unregister().then(() => {
+        console.log('Service Worker disattivato con successo');
       });
     })
   );
@@ -30,13 +35,4 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   // Non intercettare nessuna richiesta - passa tutto alla rete
   return;
-});
-
-// Disattiva se stesso dopo l'attivazione
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    self.registration.unregister().then(() => {
-      console.log('Service Worker disattivato con successo');
-    })
-  );
 });

@@ -207,17 +207,10 @@
         // Ascolta i messaggi dal service worker
         navigator.serviceWorker.addEventListener('message', function(event) {
           if (event.data && event.data.type === 'SW_DISABLED') {
-            console.log('Service Worker disabilitato, ricarico la pagina');
-            window.location.reload();
+            console.log('Service Worker disabilitato con successo');
+            // Non ricaricare automaticamente per evitare loop infiniti
           }
         });
-
-        // Ricarica la pagina dopo aver disattivato il service worker
-        setTimeout(function() {
-          console.log('Ricarico la pagina per applicare le modifiche');
-          // Forza il refresh della cache del browser
-          window.location.reload(true);
-        }, 2000);
       }
     </script>
   </body>

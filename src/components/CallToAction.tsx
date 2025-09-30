@@ -60,22 +60,37 @@ const CallToAction = () => {
             </p>
             
             <div className="max-w-md mx-auto mb-8">
-              <a 
-                href="https://apps.apple.com/it/app/leap/id6742512702" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-block"
-              >
-                <img 
-                  src="/downloadAppStore.png" 
-                  alt="Scarica su App Store" 
-                  className="h-12 md:h-14 w-auto hover:opacity-80 transition-opacity"
-                />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a 
+                  href="https://apps.apple.com/it/app/leap/id6742512702" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-block"
+                >
+                  <img 
+                    src="/downloadAppStore.png" 
+                    alt="Scarica su App Store" 
+                    className="h-12 md:h-14 w-auto hover:opacity-80 transition-opacity"
+                  />
+                </a>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.leapstudio.android" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-block"
+                >
+                  <img 
+                    src="/download-play-store.svg" 
+                    alt="Scarica su Google Play Store" 
+                    className="h-12 md:h-14 w-auto hover:opacity-80 transition-opacity"
+                    style={{ width: '180px', height: 'auto' }}
+                  />
+                </a>
+              </div>
             </div>
             
             <p className="text-sm text-gray-500">
-              Disponibile su iPhone e iPad
+              Disponibile su iPhone, iPad e Android
             </p>
           </div>
         </div>

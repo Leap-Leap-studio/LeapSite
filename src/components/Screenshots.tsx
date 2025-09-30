@@ -83,11 +83,11 @@ const Screenshots = () => {
             <span className="text-gradient"> l'Esperienza Leap</span>
           </h2>
           <p className="text-lg text-gray-600 mb-6">
-            Visualizza alcuni screenshot dell'app Leap in azione su iPhone e iPad.
-            Ora disponibile sull'App Store.
+            Visualizza alcuni screenshot dell'app Leap in azione su iPhone, iPad e Android.
+            Ora disponibile su App Store e Google Play Store.
           </p>
           <div className="inline-block bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
-            <span className="text-leap-primary font-medium">Disponibile su App Store per iOS</span>
+            <span className="text-leap-primary font-medium">Disponibile su App Store e Google Play Store</span>
           </div>
           <div className="mb-8">
             <a

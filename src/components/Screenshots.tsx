@@ -107,8 +107,8 @@ const Screenshots = () => {
               {screenshots.map((item) => (
                 <CarouselItem key={item.id} className="md:basis-1/2 lg:basis-1/3 px-3 py-8">
                   <div className="glass-card p-2 h-full">
-                    <div className="relative aspect-[9/16] md:aspect-[9/19] bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden flex justify-center items-center">
-                      <img src={`/screenshot/screenshot-${item.id}.png`} alt={item.title} className="w-32 md:w-40 lg:w-48 h-auto object-cover" />
+                    <div className="relative bg-gradient-to-tr from-leap-primary/10 to-leap-accent/10 rounded-xl mb-4 overflow-hidden flex justify-center items-center">
+                      <img src={`/screenshot/screenshot-${item.id}.png`} alt={item.title} className="w-full h-auto object-contain max-h-96" />
                     </div>
                     <div className="p-3">
                       <h3 className="font-semibold">{item.title}</h3>

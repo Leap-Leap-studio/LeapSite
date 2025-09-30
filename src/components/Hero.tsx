@@ -99,7 +99,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-leap-primary/20 to-leap-accent/20 blur-2xl" />
             <div className="bg-white/30 backdrop-blur-md shadow-glass rounded-3xl p-4 md:p-6 border border-white/30 overflow-hidden relative hover-scale">
               <div className="bg-black/5 rounded-2xl overflow-hidden flex justify-center items-center">
-                 <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-56 md:w-72 lg:w-80 h-auto object-cover" />
+                 <img src="/screenshot/Homepage.png" alt="Homepage screenshot" className="w-full h-auto object-contain max-h-96" />
              </div>
               
               {/* Floating elements to show gamification */}

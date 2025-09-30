@@ -196,10 +196,19 @@
           });
         }
 
+        // Forza la pulizia della cache del browser
+        if ('localStorage' in window) {
+          localStorage.clear();
+        }
+        if ('sessionStorage' in window) {
+          sessionStorage.clear();
+        }
+
         // Ricarica la pagina dopo aver disattivato il service worker
         setTimeout(function() {
           console.log('Ricarico la pagina per applicare le modifiche');
-          window.location.reload();
+          // Forza il refresh della cache del browser
+          window.location.reload(true);
         }, 1000);
       }
     </script>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'leap-cache-v2';
+const CACHE_NAME = 'leap-cache-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -17,23 +17,29 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // Non intercettare richieste per file JavaScript e CSS dinamici
+  // Non intercettare richieste per file JavaScript, CSS e altri asset dinamici
   if (event.request.url.includes('/assets/') || 
       event.request.url.endsWith('.js') || 
-      event.request.url.endsWith('.css')) {
+      event.request.url.endsWith('.css') ||
+      event.request.url.includes('vite') ||
+      event.request.url.includes('hot-update') ||
+      event.request.url.includes('chunk') ||
+      event.request.url.includes('module')) {
     return;
   }
   
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
+  // Solo per richieste di navigazione (HTML)
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      caches.match(event.request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        })
+    );
+  }
 });
 
 self.addEventListener('activate', (event) => {

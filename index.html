@@ -134,6 +134,19 @@
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
     
+    <!-- Fallback per errori di caricamento -->
+    <script>
+      window.addEventListener('error', function(e) {
+        if (e.filename && e.filename.includes('.js')) {
+          console.error('Errore caricamento JS:', e.filename);
+          // Ricarica la pagina dopo un breve delay
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        }
+      });
+    </script>
+    
     <!-- Service Worker -->
     <script>
       if ('serviceWorker' in navigator) {
@@ -141,6 +154,19 @@
           navigator.serviceWorker.register('/sw.js')
             .then((registration) => {
               console.log('SW registered: ', registration);
+              
+              // Controlla se c'è un aggiornamento disponibile
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                if (newWorker) {
+                  newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                      // Nuovo service worker installato, ricarica la pagina
+                      window.location.reload();
+                    }
+                  });
+                }
+              });
             })
             .catch((registrationError) => {
               console.log('SW registration failed: ', registrationError);

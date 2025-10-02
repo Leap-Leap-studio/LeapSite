@@ -103,6 +103,12 @@
   status = 200
   force = true
 
+[[redirects]]
+  from = "/ads.txt"
+  to = "/ads.txt"
+  status = 200
+  force = true
+
 # Redirect finale per SPA (solo per route che non corrispondono ai file sopra)
 [[redirects]]
   from = "/*"
